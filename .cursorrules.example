@@ -1,0 +1,130 @@
+# .cursorrules - Advanced Template
+# Copy this to your project root and customize for your codebase
+
+# =============================================================================
+# PROJECT OVERVIEW
+# =============================================================================
+
+# Stack & Technologies
+- Primary language: [specify: TypeScript, Python, Go, etc.]
+- Framework: [specify: React, Django, FastAPI, etc.]
+- Testing: [specify: Jest, pytest, etc.]
+- Build tool: [specify: webpack, esbuild, etc.]
+
+# =============================================================================
+# ARCHITECTURE & PATTERNS
+# =============================================================================
+
+# Core architectural principles
+- Follow [specify pattern: MVC, Clean Architecture, etc.]
+- Module boundaries: [specify which modules should not interact directly]
+- Data flow: [specify: unidirectional, event-driven, etc.]
+
+# When unsure, prefer:
+- [Pattern A] over [Pattern B] because [reason]
+- [Approach X] for [situation type]
+- [Default Y] unless explicitly required otherwise
+
+# =============================================================================
+# CODE STYLE & CONVENTIONS
+# =============================================================================
+
+# Formatting
+- Use [specify: Prettier, Black, gofmt, etc.]
+- Indentation: [tabs/spaces, size]
+- Line length: [limit]
+- Trailing commas: [yes/no]
+
+# Naming
+- Functions: [camelCase/PascalCase/snake_case]
+- Classes: [PascalCase]
+- Constants: [UPPER_SNAKE_CASE]
+- Files: [kebab-case/PascalCase/snake_case]
+
+# =============================================================================
+# TESTING PHILOSOPHY
+# =============================================================================
+
+# Testing approach
+- Write tests for: [specify: all public APIs, critical paths, edge cases]
+- Prefer: [unit/integration/e2e] tests for [situation type]
+- Test coverage goal: [percentage]
+- Always test error cases and edge conditions
+
+# =============================================================================
+# ERROR HANDLING
+# =============================================================================
+
+# Error handling conventions
+- Use [specify: exceptions, Result types, error codes]
+- Always log errors with context
+- Never swallow errors silently
+- Include error codes for API responses
+
+# =============================================================================
+# SAFETY & CONSTRAINTS
+# =============================================================================
+
+# Change guidelines
+- Prefer minimal diffs; don't change unrelated files
+- Preserve existing naming and style unless refactoring
+- Don't break public APIs without deprecation path
+- Keep changes focused and atomic
+
+# Refactoring rules
+- Preserve behavior when refactoring
+- List risks explicitly before large changes
+- Run tests before and after refactoring
+- For multi-file edits, summarize each file's change in one line
+
+# =============================================================================
+# WORKING AGREEMENTS WITH AI
+# =============================================================================
+
+# Communication
+- Explain assumptions in one sentence max
+- If unsure, ask ONE clarifying question before proceeding
+- When proposing changes, provide:
+  - Brief reasoning (1-2 lines)
+  - Files to modify
+  - Expected behavior change
+  - Validation steps
+
+# Decision making
+- Don't make stylistic changes unless explicitly asked
+- Don't add features outside the stated scope
+- When implementing: propose → wait for confirmation → execute
+- Always show diffs before applying large changes
+
+# =============================================================================
+# PROJECT-SPECIFIC RULES
+# =============================================================================
+
+# Domain-specific constraints
+- [Add project-specific rules here]
+- [Example: "Never import from __init__ files"]
+- [Example: "All API routes must include rate limiting"]
+
+# Known tricky areas
+- [Area 1]: [why it's tricky, how to handle it]
+- [Area 2]: [context and guidance]
+
+# =============================================================================
+# VALIDATION & QUALITY GATES
+# =============================================================================
+
+# Before submitting changes
+- Run: `make test` (or equivalent)
+- Run: `make lint` (or equivalent)
+- Run: `make typecheck` (or equivalent)
+- Verify: [any other project-specific checks]
+
+# =============================================================================
+# DOCUMENTATION STANDARDS
+# =============================================================================
+
+# Code documentation
+- Public APIs: Must have docstrings/comments
+- Complex logic: Explain "why" not just "what"
+- TODOs: Include ticket/issue reference when possible
+

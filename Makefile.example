@@ -1,0 +1,191 @@
+# Makefile - Standardized Commands for Cursor
+# Copy this to your project root and customize for your stack
+
+.PHONY: help setup run test lint fmt typecheck build deploy clean
+
+# Default target
+help:
+	@echo "Available commands:"
+	@echo "  make setup      - Install dependencies"
+	@echo "  make run        - Start development server"
+	@echo "  make test       - Run tests"
+	@echo "  make lint       - Check code style"
+	@echo "  make fmt        - Auto-format code"
+	@echo "  make typecheck  - Run type checker"
+	@echo "  make build      - Build for production"
+	@echo "  make deploy     - Deploy to production"
+	@echo "  make clean      - Clean build artifacts"
+
+# =============================================================================
+# Setup & Installation
+# =============================================================================
+
+setup:
+	# Example for Node.js:
+	# npm install
+	# 
+	# Example for Python:
+	# pip install -r requirements.txt
+	# pip install -r requirements-dev.txt
+	#
+	# Example for Go:
+	# go mod download
+	#
+	@echo "Running setup..."
+	@echo "Customize this target for your project"
+
+# =============================================================================
+# Development
+# =============================================================================
+
+run:
+	# Example for Node.js:
+	# npm start
+	#
+	# Example for Python:
+	# python manage.py runserver
+	# or: uvicorn main:app --reload
+	#
+	# Example for Go:
+	# go run cmd/main.go
+	#
+	@echo "Starting development server..."
+	@echo "Customize this target for your project"
+
+# =============================================================================
+# Testing
+# =============================================================================
+
+test:
+	# Example for Node.js:
+	# npm test
+	#
+	# Example for Python:
+	# pytest
+	#
+	# Example for Go:
+	# go test ./...
+	#
+	@echo "Running tests..."
+	@echo "Customize this target for your project"
+
+test-watch:
+	# Example for Node.js:
+	# npm test -- --watch
+	#
+	# Example for Python:
+	# pytest-watch
+	#
+	@echo "Running tests in watch mode..."
+
+test-coverage:
+	# Example for Node.js:
+	# npm test -- --coverage
+	#
+	# Example for Python:
+	# pytest --cov
+	#
+	# Example for Go:
+	# go test -cover ./...
+	#
+	@echo "Running tests with coverage..."
+
+# =============================================================================
+# Code Quality
+# =============================================================================
+
+lint:
+	# Example for Node.js:
+	# npm run lint
+	# or: eslint .
+	#
+	# Example for Python:
+	# flake8 .
+	# or: pylint src/
+	#
+	# Example for Go:
+	# golangci-lint run
+	#
+	@echo "Running linter..."
+	@echo "Customize this target for your project"
+
+fmt:
+	# Example for Node.js:
+	# npm run format
+	# or: prettier --write .
+	#
+	# Example for Python:
+	# black .
+	# isort .
+	#
+	# Example for Go:
+	# go fmt ./...
+	#
+	@echo "Formatting code..."
+	@echo "Customize this target for your project"
+
+typecheck:
+	# Example for TypeScript:
+	# npx tsc --noEmit
+	#
+	# Example for Python:
+	# mypy src/
+	#
+	# Example for Go:
+	# go vet ./...
+	#
+	@echo "Running type checker..."
+	@echo "Customize this target for your project"
+
+# =============================================================================
+# Build & Deploy
+# =============================================================================
+
+build:
+	# Example for Node.js:
+	# npm run build
+	#
+	# Example for Python:
+	# pip install -r requirements.txt
+	# or: docker build -t myapp .
+	#
+	# Example for Go:
+	# go build -o bin/myapp ./cmd
+	#
+	@echo "Building for production..."
+	@echo "Customize this target for your project"
+
+deploy:
+	# Example:
+	# npm run deploy
+	# or: ./scripts/deploy.sh
+	# or: docker push myapp:latest
+	#
+	@echo "Deploying to production..."
+	@echo "Customize this target for your project"
+
+# =============================================================================
+# Cleanup
+# =============================================================================
+
+clean:
+	# Example for Node.js:
+	# rm -rf node_modules dist build
+	#
+	# Example for Python:
+	# find . -type d -name __pycache__ -exec rm -r {} +
+	# find . -type f -name "*.pyc" -delete
+	#
+	# Example for Go:
+	# go clean ./...
+	#
+	@echo "Cleaning build artifacts..."
+	@echo "Customize this target for your project"
+
+# =============================================================================
+# All Quality Checks (useful for pre-commit or CI)
+# =============================================================================
+
+check: lint typecheck test
+	@echo "All quality checks passed!"
+
