@@ -257,6 +257,7 @@ After each step, run tests and verify behavior is preserved."
 
 **Managing Multiple Features Simultaneously**:
 
+**Option 1: Chat Tabs Within Same Branch**
 **Setup**:
 - Feature A: Chat Tab 1 (with relevant files @mentioned)
 - Feature B: Chat Tab 2 (with relevant files @mentioned)
@@ -273,6 +274,31 @@ any changes I'm making. Review @shared.service.ts for conflicts."
 "Working on Feature B. Verify no conflicts with Feature A. Both use
 @shared.service.ts but different methods."
 ```
+
+**Option 2: Git Worktrees (True Parallel Development)**
+**Setup**: Separate checked-out branches
+- Feature A: `git worktree add ../myapp-feature-a feature-a` → Chat Tab 1
+- Feature B: `git worktree add ../myapp-feature-b feature-b` → Chat Tab 2
+- Bug Fix: `git worktree add ../myapp-bugfix bugfix-123` → Chat Tab 3
+
+**Key Advantage**: Each worktree has completely isolated context. No branch conflicts, instant switching, no stashing/unstashing.
+
+**Advanced Pattern**: Multiple worktrees + multiple Cursor windows
+```
+Window 1: Auth feature worktree
+  - Tab 1: Architecture planning
+  - Tab 2: Implementation
+  - Tab 3: Testing
+
+Window 2: Payment feature worktree  
+  - Tab 1: Code review
+  - Tab 2: Bug fixes
+
+Window 3: Hotfix worktree
+  - Tab 1: Critical bug analysis
+```
+
+**For complete Git worktrees workflow**: See `GIT_WORKTREES.md`
 
 **Exercise**:
 Orchestrate a complete feature using all 5 stages. Document the time saved vs. manual implementation.
